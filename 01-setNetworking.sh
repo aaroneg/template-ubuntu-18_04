@@ -42,5 +42,5 @@ sed -i "s/_GATEWAY4_/$4/g" "$1.yaml"
 sed -i "s/_SEARCHDOMAIN_/$5/g" "$1.yaml"
 sed -i "s/_DNSSERVER_/$6/g" "$1.yaml"
 cp "$1.yaml" /etc/netplan/
-echo "${red}APPLYING NEW NETWORK CONFIG, YOU ARE NOW DISCONNECTED${reset}"
+echo "${red}APPLYING NEW NETWORK CONFIG, YOU ARE NOW DISCONNECTED!${reset}"
 netplan apply &
