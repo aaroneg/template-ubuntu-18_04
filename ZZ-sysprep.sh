@@ -24,8 +24,7 @@ fi
 echo "${yellow}Installing base packages.${reset}"
 apt-get update
 apt-get install -y git yadm screen snmpd snmp libsnmp-dev 
-systemctl enable snmpd
-systemctl start snmpd
+
 
 echo "${yellow}Halting rsyslog.${reset}"
 #Stop services for cleanup
