@@ -1,0 +1,12 @@
+# Modify for your needs
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    _INTERFACE_:
+      addresses:
+        - _V4ADDRESS_/_V4PREFIX_
+      gateway4: _GATEWAY4_
+      nameservers:
+          search: [_SEARCHDOMAIN_]
+          addresses: [_DNSSERVER_]
