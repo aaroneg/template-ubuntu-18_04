@@ -32,6 +32,7 @@ else
 	echo "${red}Script must be run as root${reset}"
 	exit 1
 fi
+echo "${blue}Disabling old network configs.${reset}"
 find /etc/netplan -name "*.yaml" -exec bash -c 'mv "$1" "${1%.yaml}".yaml.disabled' - '{}' \;
 cp ./static.yaml "./$1.yaml"
 sed -i "s/_INTERFACE_/$1/g" "$1.yaml"
