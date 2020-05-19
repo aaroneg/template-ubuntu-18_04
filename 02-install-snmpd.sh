@@ -24,8 +24,9 @@ then
 	usage
 	exit 1
 fi
+apt install -y snmpd
 mv /etc/snmpd/snmpd.conf /etc/snmpd/snmpd.conf.orig
-"rocommunity $1 default .1.3.6.1.2.1.1" > /etc/snmp/snmpd.conf
+echo "rocommunity $1 default .1.3.6.1.2.1.1" > /etc/snmp/snmpd.conf
 
 systemctl enable snmpd
 systemctl restart snmpd
