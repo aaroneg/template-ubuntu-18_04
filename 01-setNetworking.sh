@@ -15,7 +15,7 @@ reset=`tput -Txterm sgr0`
 usage()
 {
 	cat<<EOF
-usage: $0 {interface} {IPv4Adrress} {PrefixLength} {gateway4} {searchDomain} {dnsserver}
+usage: $0 {interface} {IPv4Address} {PrefixLength} {gateway4} {searchDomain} {dnsserver}
 example: $0 "ens160" "192.168.0.5" "24" "192.168.0.1" "my.example" "192.168.0.1"
 EOF
 }
